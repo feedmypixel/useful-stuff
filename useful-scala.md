@@ -570,6 +570,8 @@ for (m <- "(s[^h,]+)".r.findFirstMatchIn(rhyme)) yield m  // Some(sir)
 
 
 <a name="return_type">
+## Return Type
+
 #### Specify return type
 ```java
 val hello: String = "hi there!"
