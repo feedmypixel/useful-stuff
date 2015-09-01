@@ -1,6 +1,6 @@
 # Useful Stuff
 
-A collection of various learnt, taught and shown items discovered whilst on this coding journey. 
+A collection of useful coding stuff  
 
 ### Table of contents
 
