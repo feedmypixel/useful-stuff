@@ -22,12 +22,12 @@ use <database_name>
 
 #### Create collection
 ```
-db.createCollection(<collection name>, [options])
+db.createCollection(<collection_name>, [options])
 ```
 
 #### Drop database
 ```
-use <db name>
+use <database_name>
 db.dropDatabase()
 ```
 
