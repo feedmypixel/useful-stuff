@@ -41,6 +41,11 @@ show collections
 db.<collection>.find({})
 ```
 
+#### Formatted collection view
+```
+db.<collection>.find().pretty()
+```
+
 #### Help
 ```
 help
