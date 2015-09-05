@@ -8,6 +8,7 @@ A list of useful git commands.
 - [Changes](#changes)
 - [Conditionally](#conditionally)
 - [Config](#config)
+- [Duplicate](#duplicate)
 - [Merge](#merge)
 - [Rebase](#rebase)
 - [Remote](#remote)
@@ -136,6 +137,25 @@ git config user.name
 #### Show all config
 ```
 git config --list
+```
+
+
+
+<a name=“duplicate”>
+## Duplicate
+
+####
+Duplicate repo
+Make a clone of the repo
+
+```
+git clone --bare <repository_to_duplicate>
+```
+
+Push to a new repository
+```
+cd <repository_to_duplicate>.git  
+git push --mirror <new_repository>
 ```
 
 
