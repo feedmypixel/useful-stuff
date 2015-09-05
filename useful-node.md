@@ -51,3 +51,8 @@ fg [pid]
 ```
 node -pe "require('url').parse('/test?q=1', true)"
 ```
+
+#### V8 engine version
+```
+node -p process.versions.v8
+```
