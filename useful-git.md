@@ -124,6 +124,46 @@ git co -p
 git add -i
 ```
 
+#### Hunk options 
+> When in patch or interactive mode
+
+Yes, add this hunk
+
+```
+y
+```
+
+No, don’t add this hunk
+
+```
+n
+```
+
+No, don’t add this hunk and all other remaining hunks
+
+```
+d
+```
+
+Quit
+
+```
+q
+```
+
+Split the hunk into smaller hunks
+
+```
+s
+```
+
+Manually edit the hunk
+
+```
+e
+```
+
+
 
 
 <a name="config">
