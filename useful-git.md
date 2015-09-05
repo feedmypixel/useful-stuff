@@ -161,29 +161,31 @@ git push --mirror <new_repository>
 
 
 <a name="merge">
-# Merge
+## Merge
 
-##### Pull master
-```git pull origin master```
+#### Pull master
+```
+git pull origin master
+```
 
-##### Show merge conflict(s) then fix conflicts in files
+#### Show merge conflict(s) then fix conflicts in files
 ```
 git st 
 ```
 
-##### Add merge conflict file
+#### Add merge conflict file
 ```
 git add <filename>
 ```
 
-##### Commit
+#### Commit
 ```
 git ci
 ```
 
-##### Accept merge message
+#### Accept merge message
 
-##### Push to branch
+#### Push to branch
 ```
 git push origin <branchName>
 ```
