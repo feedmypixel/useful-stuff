@@ -211,22 +211,22 @@ j
 
 #### Move half-page down
 ```
-d
+ctrl-d
 ```
 
 #### Move half-page up
 ```
-u
+ctrl-u
 ```
 
 #### Page up
 ```
-b
+ctrl-b
 ```
 
 #### Page down
 ```
-f
+ctrl-f
 ```
 
 #### Move forward to end of current word then next word
