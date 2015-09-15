@@ -218,7 +218,10 @@ uname -a
 pbcopy < ~/.ssh/id_rsa.pub 
 ```
 
-
+#### Add your SSH key to the ssh-agent:
+```
+ssh-add ~/.ssh/id_rsa
+```
 
 <a name="navigate">
 ## Navigate
