@@ -281,6 +281,11 @@ sudo chown `id -u` <pathname>
 sudo chown -R <user>:<group> <pathname>
 ```
 
+#### Recursively set folder ownership to username
+```
+sudo chown -R `whoami` /usr/local
+```
+
 
 
 <a name="remove">
