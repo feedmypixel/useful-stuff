@@ -223,6 +223,11 @@ pbcopy < ~/.ssh/id_rsa.pub
 ssh-add ~/.ssh/id_rsa
 ```
 
+#### Change passphrase
+```
+ssh-keygen -p
+```
+
 <a name="navigate">
 ## Navigate
 
@@ -284,6 +289,10 @@ sudo chown -R <user>:<group> <pathname>
 #### Recursively set folder ownership to username
 ```
 sudo chown -R `whoami` /usr/local
+```
+
+```
+sudo chown -R `whoami` /Library/Caches/Homebrew/
 ```
 
 
