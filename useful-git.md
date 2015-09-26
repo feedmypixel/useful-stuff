@@ -234,6 +234,11 @@ git push origin <branchName>
 <a name="rebase">
 ## Rebase
 
+#### Rebase a pull onto current branch
+```
+g pull --rebase
+```
+
 #### Rebase back to previous commit
 ```
 git rebase -ip HEAD~3
