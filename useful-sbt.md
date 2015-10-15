@@ -31,3 +31,8 @@ test-only org.acme.RedSuite org.acme.BlueSuite
 ```
 test-only *RedSuite
 ```
+
+### A glob with watcher
+```
+~test-only *RedSuite
+```

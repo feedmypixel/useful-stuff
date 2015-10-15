@@ -287,6 +287,11 @@ mixup latest commit
 git remote show origin
 ```
 
+or
+```
+git remote -v
+```
+
 
 
 <a name="reset">

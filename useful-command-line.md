@@ -223,7 +223,7 @@ pbcopy < ~/.ssh/id_rsa.pub
 ssh-add ~/.ssh/id_rsa
 ```
 
-#### Change passphrase
+#### Adding or changing a passphrase
 ```
 ssh-keygen -p
 ```
@@ -337,6 +337,11 @@ grep -nr <string> <directory>
 #### Find string in file (do not include .svn files)
 ```
 grep -rl <string> <pathname> | grep .svn -v
+```
+
+#### Find string in file (only in .html files)
+```
+grep -nr --include \*.html routes .
 ```
 
 #### Find file
