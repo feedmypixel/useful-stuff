@@ -25,6 +25,11 @@ use <database_name>
 db.createCollection(<collection_name>, [options])
 ```
 
+#### Insert into collection
+```
+db.<collection>.insert(<document_or_array_of_documents>)
+```
+
 #### Drop database
 ```
 use <database_name>
