@@ -329,6 +329,16 @@ grep <string> <filename>
 grep <string> <filename1> <filename2> <filename3>
 ```
 
+#### Grep with RegEx
+```
+grep -nrE "data-sso=\"(true|client|server)\"" .
+```
+
+#### Grep with inverse
+```
+grep -nrE 'target="(_blank|_self|_top|_parent)"' . | grep -E -v 'target="(_blank|_self|_top|_parent)"'
+```
+
 #### Search directory
 ```
 grep -nr <string> <directory>
@@ -341,7 +351,7 @@ grep -rl <string> <pathname> | grep .svn -v
 
 #### Find string in file (only in .html files)
 ```
-grep -nr --include \*.html routes .
+grep -nr --include \*.html <string> .
 ```
 
 #### Find file

@@ -80,6 +80,11 @@ git fetch
 git co <branchName>
 ```
 
+#### Checkout a previous commit
+```
+git co <commit_sha>
+```
+
 
 <a name="changes">
 ## Changes
