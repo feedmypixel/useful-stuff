@@ -276,12 +276,21 @@ You can rebase non consecutive commits together this is just a matter of working
 <pre>
 ----- old commit
 
-mixup latest commit
+fixup latest commit
 
 ----- other commit
 
 ----- other commit
 </pre>
+
+##### When a rebase goes wrong
+```
+git reflog
+```
+
+```
+git reset <sha> --hard
+```
 
 
 <a name="remote">
