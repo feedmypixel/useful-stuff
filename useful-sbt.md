@@ -12,9 +12,27 @@
 - run
 - test
 
+#### Run with port
+```
+sbt
+```
+```
+run <port_number>
+```
+
+#### Run with port shortcut
+```
+sbt '~run 9020'
+```
+
 #### Add a watcher on scala tests
 ```
-~test
+sbt ~test
+```
+
+#### Add a watcher on publish-local
+```
+sbt ~publish-local
 ```
 
 #### To return to cli

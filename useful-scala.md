@@ -408,12 +408,12 @@ cmd + alt + h
 Some("hello").map(string => string.toUpperCase) // SOME("HELLO")
 ```
 
-shorthand
+#### Shorthand
 ```java
 Some("hello").map(_.toUpperCase) // SOME("HELLO")
 ```
 
-multiline
+#### Multiline
 ```java
 Some("hello").map { text =>
     text.capitalize
@@ -421,6 +421,19 @@ Some("hello").map { text =>
 
 // SOME("Hello")
 ```
+
+#### Mapping over a map 
+```java
+val people = Map("ben" -> Seq("1","2","3"), "danny" -> Seq("3","4","5"), "naomi" -> Seq.empty)
+
+people.map {
+	case (key, values) => (key, values.map(_.replaceAll("1", "awesome")))
+}
+
+// Results in
+Map(ben -> List(awesome, 2, 3), danny -> List(3, 4, 5), naomi -> List())
+```
+
 
 #### Underscore
 Here you can see the underscore being used as the variable when iterating over the List
@@ -432,7 +445,7 @@ List(1,2,3).map(_ * 2) // List[2,4,9]
 
 <a name="map_construct">
 ## Map construct
-You can use a Map and key to refer to a value by type
+You can use a Map and key to refer to a value by type. Think of Maps as similar to Associative arrays.
 
 ```java
 @Config.genderDetails(gender)

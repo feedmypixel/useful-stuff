@@ -235,6 +235,10 @@ git ci
 git push origin <branchName>
 ```
 
+#### Merge local branch onto current branch
+```
+git merge <branchName>
+```
 
 <a name="rebase">
 ## Rebase
@@ -326,9 +330,9 @@ git reset HEAD <file>
 git checkout <branch> <file>
 ```
 
-#### Undo last commit
+#### Undo last commit (handy to recommit W.I.P)
 ```
-git reset --soft 'HEAD^'
+git reset --soft HEAD^
 ```
 
 #### Reset checkout git wise
