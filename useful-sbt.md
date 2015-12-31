@@ -30,6 +30,11 @@ sbt '~run 9020'
 sbt ~test
 ```
 
+#### Quick test (just failing tests)
+```
+sbt test-quick
+```
+
 #### Add a watcher on publish-local
 ```
 sbt ~publish-local
@@ -48,6 +53,11 @@ test-only org.acme.RedSuite org.acme.BlueSuite
 #### Or you can specify a glob
 ```
 test-only *RedSuite
+```
+
+#### with glob and test with the word 'redirect' in it
+```
+test-only *Challenge* -- -z redirect
 ```
 
 #### A glob with watcher

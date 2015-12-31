@@ -23,6 +23,7 @@ A number of useful Scala things
 - [Regex](#regex)
 - [Return Type](#return_type)
 - [Reverse Routing](#reverse_routing)
+- [Testing](#testing)
 - [Tuple](#tuple)
 - [Types](#types)
 - [Val](#val)
@@ -641,7 +642,14 @@ val polo = Car("polo", "black", 4)
 fixie.isBicycle // false
 ```
 
-
+<a name="testing">
+## Testing
+Write pending tests
+```java
+  "Something" should {
+    "do this when this is equal to true" pending
+  }
+```
 
 <a name="tuple">
 ## Tuple 

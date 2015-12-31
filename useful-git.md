@@ -258,11 +258,17 @@ git rebase -ip HEAD~3
 git rebase master <your branch name>
 ```
 
+
+#### Rebase first and second commit.
+```
+git rebase -i --root master
+```
+
 #### Operate on non-consecutive commits 
 You can rebase non consecutive commits together this is just a matter of working bottom up (oldest is at the top) and taking the latest/last commit back to the first/oldest commit you wish to fixup/squash with. I would backup your branch and experiment. Remember to fixup/squah at same time as moving the line of the commit in rebase.
 
 
-##### Rebase order
+#### Rebase order
 <pre>
 ----- old commit
 
@@ -274,9 +280,9 @@ You can rebase non consecutive commits together this is just a matter of working
 </pre>
 
 
-##### To merge `rebase -ip` then place commits together, you must move your latest to oldest otherwise commits in-between get removed.
+#### To merge `rebase -ip` then place commits together, you must move your latest to oldest otherwise commits in-between get removed.
 
-##### Move commits around
+#### Move commits around
 <pre>
 ----- old commit
 
@@ -287,7 +293,7 @@ fixup latest commit
 ----- other commit
 </pre>
 
-##### When a rebase goes wrong
+#### When a rebase goes wrong
 ```
 git reflog
 ```
@@ -308,6 +314,16 @@ git remote show origin
 or
 ```
 git remote -v
+```
+
+#### Add remote
+```
+git remote add <remote_name> <remote_url>
+```
+
+#### Remove remote
+```
+git remote rm <destination>
 ```
 
 
@@ -474,7 +490,7 @@ git stash show -p
 ## Tag
 #### Add a tag
 ```
-git tag <tag name>
+git tag <tag_name>
 ```
 
 #### Show tags
@@ -482,6 +498,33 @@ git tag <tag name>
 git tag
 ```
 
+#### Checkout tags
+```
+git checkout tags/<tag_name>
+```
+
+#### Push tags
+```
+git push --tags
+```
+
+#### Remove Tags
+```
+git tag -d <tag_name>
+```
+
+#### Remote remove tags
+```
+git push origin :refs/tags/<tag_name>
+```
+
+#### Rename tag
+```
+git tag <new_tag_name> <old_tag_name>
+git tag -d <old_tag_name>
+git push origin :refs/tags/<old_tag_name>
+git push --tags
+```
 
 
 <a name="update">

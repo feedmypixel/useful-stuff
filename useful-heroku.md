@@ -7,3 +7,8 @@ cd to <repository>
 ```
 heroku git:remote -a <heroku_app>
 ```
+
+#### Tail logs
+```
+heroku logs --tail
+```
