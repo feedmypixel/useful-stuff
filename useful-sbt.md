@@ -60,6 +60,24 @@ test-only *RedSuite
 test-only *Challenge* -- -z redirect
 ```
 
+#### with glob in sbt
+```
+sbt
+```
+```
+testOnly *SecureLogin*
+```
+
+#### It tests
+```
+sbt "it:test-only controllers.SecureLoginControllerWithSecureFormEnabledISpec"
+```
+
+Or, if you are in the sbt console you don't need quotes
+```
+it:test-only controllers.SecureLoginControllerWithSecureFormEnabledISpec
+```
+
 #### A glob with watcher
 ```
 ~test-only *RedSuite

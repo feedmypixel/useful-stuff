@@ -29,6 +29,19 @@ A list of useful git commands.
 git commit --amend
 ```
 
+#### Add files to the previous commit by:
+```
+git add -p
+```
+add files
+
+```
+git commit --amend
+```
+
+files will be added to previous commit
+
+
 #### Rename branch
 ```
 git br -m <newname>
