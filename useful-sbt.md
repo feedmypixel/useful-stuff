@@ -49,6 +49,9 @@ ctrl d
 ```
 test-only org.acme.RedSuite org.acme.BlueSuite
 ```
+```
+testOnly controllers.SecureLoginControllerSpec
+```
 
 #### Or you can specify a glob
 ```

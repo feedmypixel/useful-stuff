@@ -18,7 +18,6 @@
 - [Tail](#tail)
 
 
-
 <a name="alias">
 ## Alias
 
@@ -357,6 +356,11 @@ grep -nr --include \*.html <string> .
 #### Find file
 ```
 find <pathname> -name <filename>
+```
+
+#### Loop through top level directories and git pull
+```
+find . -maxdepth 1 -type d | while read line; do cd $line; g co master; g pull; cd -; done
 ```
 
 #### Search for filename, not in a location, Loop through results and echo directory name
