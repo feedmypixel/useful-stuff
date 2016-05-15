@@ -44,6 +44,18 @@ npm view <package_name> versions
 npm ls 
 ```
 
+#### link
+cd to repo you wish to link to
+
+```
+npm link <package-name>
+```
+
+cd to repo you wish to have linked repo in (the linked repo will be in node_modules)
+```
+npm link <package-name>
+```
+
 #### Pre and Post task tasks
 For any task you can use the `pre`<task> or `post`<task> syntax.
 

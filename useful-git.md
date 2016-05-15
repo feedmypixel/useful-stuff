@@ -77,6 +77,11 @@ git push -u origin <local branch name>
 git push origin :bc-name-log-fix
 ```
 
+#### Remove remote branches already merged
+```
+git branch --merged | grep -v "\*" | grep -v master | xargs -n 1 git branch -d
+```
+
 #### Create branch and switch to it
 ```
 git checkout -b branchName
