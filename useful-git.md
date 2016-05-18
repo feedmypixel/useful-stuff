@@ -139,7 +139,12 @@ git add -p
 
 #### Commit code conditionally
 ```
-git co -p
+git commit -p
+```
+
+#### Commit a hunk of code conditionally with a message
+```
+git commit -pm 'Commit message'
 ```
 
 #### Add interactively
@@ -337,6 +342,11 @@ git remote -v
 #### Add remote
 ```
 git remote add <remote_name> <remote_url>
+```
+
+#### Change remote url
+```
+git set-url origin <remote_name> <remote_url>
 ```
 
 #### Remove remote
