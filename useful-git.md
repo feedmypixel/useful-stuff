@@ -346,7 +346,7 @@ git remote add <remote_name> <remote_url>
 
 #### Change remote url
 ```
-git set-url origin <remote_name> <remote_url>
+git remote set-url <remote_name> <remote_url>
 ```
 
 #### Remove remote
