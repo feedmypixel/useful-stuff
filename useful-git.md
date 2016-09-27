@@ -107,7 +107,7 @@ git co <commit_sha>
 <a name="changes">
 ## Changes
 
-#### Show staged changes
+#### Show staged/staging changes
 ```
 git diff --cached
 ```

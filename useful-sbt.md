@@ -45,12 +45,9 @@ sbt ~publish-local
 ctrl d
 ```
 
-#### If you want to run particular suites, use test-only and provide their fully qualified names in a space separated list
+#### Run specifc test on watch
 ```
-test-only org.acme.RedSuite org.acme.BlueSuite
-```
-```
-testOnly controllers.SecureLoginControllerSpec
+sbt ~"test-only **ApplicationConfigSpec"
 ```
 
 #### Or you can specify a glob

@@ -382,7 +382,10 @@ find . -iname bower.json | grep -v <pathname_1> | grep <pathname_2> | while read
 find . -iname <filename> | grep -v <pathname_1> | grep -v <pathname_2> | grep <pathname_3> 
 ```
 
-
+#### Find files and prepend value
+```
+folder="app/views/"; host="http://localhost:3000"; find $folder -name *.html | grep -v includes | grep -v layout | while read line; do echo $host${line#$folder}; done
+```
 
 <a name="sym_link">
 ## Sym Link
