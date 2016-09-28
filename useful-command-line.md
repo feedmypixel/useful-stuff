@@ -387,6 +387,11 @@ find . -iname <filename> | grep -v <pathname_1> | grep -v <pathname_2> | grep <p
 folder="app/views/"; host="http://localhost:3000"; find $folder -name *.html | grep -v includes | grep -v layout | while read line; do echo $host${line#$folder}; done
 ```
 
+#### Add filename labels to images 
+```
+find . -name *.png | while read line; do fileName=$(basename $line); montage -label '%f' $fileName "${fileName}_test"; done;
+```
+
 <a name="sym_link">
 ## Sym Link
 
