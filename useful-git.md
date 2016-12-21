@@ -433,6 +433,17 @@ git reset --hard upstream/master
 git push --force
 ```
 
+#### Rebase upstream data on fork
+```
+git fetch upstream
+```
+```
+git checkout master
+```
+```
+git rebase upstream/master
+```
+
 
 <a name="search">
 ## Search
@@ -529,6 +540,11 @@ git tag
 #### Checkout tags
 ```
 git checkout tags/<tag_name>
+```
+
+#### Fetch tags
+```
+git fetch --tags
 ```
 
 #### Push tags
