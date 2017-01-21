@@ -1,28 +1,23 @@
 # Useful AWS Stuff
 
-## Tips
+#### Tips
 AMI is Amazon Instance (a VM) - good practice to create your own and save it off for quick boot ups
 
 
-## Custom metrics
+#### Custom metrics
 - cloudwatch
 - select ‘frontend’ in ‘custom metrics drop down’
 - use filter
 
 
-## Instances
+#### Instances
 - ec2
 - Auto Scaling
   * Launch Configurations (Select config)
   * Auto scaling groups (Edit in here)
 
-
-## Conf can be found in
-- s3
-  * membership-private
-
   
-# Useful Elastic Beanstalk stuff
+## Elastic Beanstalk
 
 #### Init
 ```bash
@@ -66,4 +61,20 @@ Open site in browser
 
 ```bash
 eb open
+```
+
+## S3
+
+#### Policy
+
+Add/Overwrite policy on s3 bucket
+```
+aws s3api put-bucket-policy --bucket <bucket_name> --policy file://policy.json
+```
+
+#### Upload
+Upload to S3 bucket with server side encryption
+
+```
+aws s3 cp test.txt s3://<bucket_name>/<file_name> --sse
 ```

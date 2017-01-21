@@ -66,3 +66,8 @@ curl --referer <referer_url> <url>
 ```
 curl -O -L <url>{1.sfx,2.rar,3.rar}
 ```
+
+#### Bust cache
+```
+curl -X GET -I -H "Cache-Control: no-cache" localhost/assets/stylesheets/application.css
+```

@@ -11,7 +11,9 @@
 - [Information](#information)
 - [Keys](#keys)
 - [Navigate](#navigate)
+- [Netcat](#netcat)
 - [Ownership](#ownership)
+- [Permissions](#permissions)
 - [Remove](#remove)
 - [Search](#search)
 - [Symlink](#symlink)
@@ -138,6 +140,11 @@ export MY_ENV=value
 #### Show env
 ```
 echo MY_ENV
+```
+
+#### Show all envs
+```
+printenv
 ```
 
 
@@ -270,6 +277,12 @@ cmd + k
 reset
 ```
 
+<a name="netcat">
+## Netcat
+Ping Redis server
+```
+nc -z localhost 6379
+```
 
 
 <a name="ownership">
@@ -294,6 +307,19 @@ sudo chown -R `whoami` /usr/local
 sudo chown -R `whoami` /Library/Caches/Homebrew/
 ```
 
+<a name="permissions">
+## Permissions
+```
+chmod 754 myfile
+```
+
+Here the digits `7`, `5`, and `4` each individually represent the permissions for the `user`, `group`, and `others`, in that order. 
+Each digit is a combination of the numbers `4`, `2`, `1`, and `0`:
+
+- `4` for "read",
+- `2` for "write",
+- `1` for "execute"
+- `0` for "no permission."
 
 
 <a name="remove">
