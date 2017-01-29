@@ -2,6 +2,7 @@
 
 ### Table of contents
 - [Alias](#alias)
+- [Append](#append)
 - [Compression](#compression)
 - [Copy](#copy)
 - [Create](#create)
@@ -16,6 +17,7 @@
 - [Permissions](#permissions)
 - [Remove](#remove)
 - [Search](#search)
+- [Search & Replace](#search-replace)
 - [Symlink](#symlink)
 - [Tail](#tail)
 
@@ -45,6 +47,12 @@ alias work='cd <pathname>'
 alias pictures='cd <pathname>'
 ```
 
+<a name="append">
+## Append
+Append text to file
+```
+echo BEN="example" >> /etc/environment
+```
 
 
 <a name="compression">
@@ -218,6 +226,11 @@ uname -a
 
 <a name="keys">
 ## Keys
+
+#### Create key
+```
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
 
 #### Copy public key to clipboard
 ```
@@ -417,6 +430,21 @@ folder="app/views/"; host="http://localhost:3000"; find $folder -name *.html | g
 ```
 find . -name *.png | while read line; do fileName=$(basename $line); montage -label '%f' $fileName "${fileName}_test"; done;
 ```
+
+<a name="search-replace">
+## Search & Replace
+
+#### Sed
+```
+sed 's/one/ONE/' <file
+```
+
+- `s`	  			Substitute command
+- `/../../`	  	Delimiter
+- `one`	  		Regular Expression Pattern Search Pattern
+- `ONE`	  		Replacement string
+
+
 
 <a name="sym_link">
 ## Sym Link

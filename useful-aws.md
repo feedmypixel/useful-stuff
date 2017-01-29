@@ -18,6 +18,7 @@ AMI is Amazon Instance (a VM) - good practice to create your own and save it off
 
   
 ## Elastic Beanstalk
+Detailed information in the [docs](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb3-cmd-commands.html?icmpid=docs_elasticbeanstalk_console)
 
 #### Init
 ```bash
@@ -26,12 +27,12 @@ eb init
 
 #### Create
 ```bash
-eb create
+eb create <environment-name>
 ```
 
 #### Deploy
 ```bash
-eb deploy
+eb deploy <environment-name>
 ```
 
 #### Abort

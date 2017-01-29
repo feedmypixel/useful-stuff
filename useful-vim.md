@@ -337,3 +337,8 @@ N
 ```
 :%s/foo/bar/gc
 ```
+#### Add at the start of all lines
+- Use `Ctrl + V` to enter visual block mode
+- Move `Up/Down` to select the columns of text in the lines you want
+- Then hit `Shift + i` and type the text you want to insert
+- Then hit `Esc`
