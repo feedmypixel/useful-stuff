@@ -10,6 +10,7 @@
 - [Download](#download)
 - [ENV](#env)
 - [Information](#information)
+- [Locate binary](#locate-binary)
 - [Keys](#keys)
 - [Navigate](#navigate)
 - [Netcat](#netcat)
@@ -20,6 +21,7 @@
 - [Search & Replace](#search-replace)
 - [Symlink](#symlink)
 - [Tail](#tail)
+- [Wget](#wget)
 
 
 <a name="alias">
@@ -195,6 +197,11 @@ sudo ps -ef | grep <process>
 kill -9 <pid>
 ```
 
+#### Kill all by name
+```
+killall node
+```
+
 #### What is using a port number
 ```
 sudo lsof -i :<port_number>
@@ -222,7 +229,12 @@ uname -a
 - Linux discworld 2.6.38-8-generic #42-Ubuntu SMP Mon Apr 11 03:31:50 UTC 2011 x86_64 x86_64 x86_64 GNU/Linux
 - Darwin MacBookPro 14.4.0 Darwin Kernel Version 14.4.0: Thu May 28 11:35:04 PDT 2015; root:xnu-2782.30.5~1/RELEASE_X86_64 x86_64
 
-
+<a name="locate-binary">
+## Locate Binary
+Locate psql bin folder
+```
+locate psql | grep /bin
+```
 
 <a name="keys">
 ## Keys
@@ -470,4 +482,15 @@ tail -100f <filename>
 #### Tail with grep
 ```
 tail -100f <filename> | grep 'not found'
+```
+
+
+<a name="wget">
+## Wget
+
+https://www.guyrutenberg.com/2014/05/02/make-offline-mirror-of-a-site-using-wget/
+
+```
+wget --mirror --convert-links --adjust-extension --page-requisites 
+--no-parent http://example.org
 ```

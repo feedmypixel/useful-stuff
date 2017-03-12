@@ -35,6 +35,11 @@ docker rmi <id>
 docker stop <name>
 ```
 
+#### Stop all
+```
+docker stop $(docker ps -a -q)
+```
+
 #### Run redis image
 Run a "redis" image named "rediscache" and expose port 6379
 ```
