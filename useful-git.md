@@ -67,6 +67,11 @@ git branch -a
 git co -b <branchName>
 ```
 
+#### Create a new branch with no work on it
+```
+git co --orphan <newBranchName>
+```
+
 #### Create local branch on remote
 ```
 git push -u origin <local branch name>

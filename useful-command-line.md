@@ -5,6 +5,7 @@
 - [Append](#append)
 - [Compression](#compression)
 - [Copy](#copy)
+- [Count](#count)
 - [Create](#create)
 - [Cron](#cron)
 - [Download](#download)
@@ -94,6 +95,13 @@ tar -cvzf <filename>.tar.gz <pathname>*.jpg
 cp -R <pathname>/* <pathname>
 ```
 
+<a name="count">
+## Count
+
+#### Count folders in working directory
+```
+ls -l | grep "^d" | wc -l
+```
 
 
 <a name="create">
