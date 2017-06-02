@@ -58,7 +58,7 @@ docker run -it redis /bin/ash
 
 #### New shell process on container called foo
 ```
-docker exec -it foo /bin/bash
+docker exec -it redis /bin/bash
 ```
 
 #### Delete all containers
@@ -78,7 +78,7 @@ docker inspect --format '{{ .NetworkSettings.IPAddress }}' <container_id>
 
 ## Docker Compose
 
-#### Buld docker compose
+#### Buld docker compose and associated images
 ```
 docker-compose build
 ```

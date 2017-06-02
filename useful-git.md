@@ -9,6 +9,7 @@ A list of useful git commands.
 - [Conditionally](#conditionally)
 - [Config](#config)
 - [Duplicate](#duplicate)
+- [Fixup](#fixup)
 - [Merge](#merge)
 - [Rebase](#rebase)
 - [Remote](#remote)
@@ -231,6 +232,25 @@ cd <repository_to_duplicate>.git
 git push --mirror <new_repository>
 ```
 
+<a name=“fixup”>
+## Fixup
+
+#### Associate fixes in pr with previous pr commits
+If you have some fixes to add to a pr use `--fixup` so a reviewer can see what has changed 
+
+```
+git commit --fixup <commit_sha>
+```
+
+and when you want to merge you view the fixup in the log
+```
+git log --oneline
+```
+
+and then rebase squash them, (best to work from back to front on big PR's)
+```
+git rebase -i --autosquash <sha>
+```
 
 
 <a name="merge">
@@ -381,6 +401,11 @@ git checkout <branch> <file>
 
 #### Undo last commit (handy to recommit W.I.P)
 ```
+git reset HEAD^
+```
+
+#### Undo last commit (handy to recommit W.I.P) (keep in staging)
+```
 git reset --soft HEAD^
 ```
 
@@ -390,6 +415,17 @@ git clean -f -d -x
 ```
 
 #### Reset last commit
+```
+git reset HEAD~
+```
+
+or
+
+```
+git reset HEAD~1
+```
+
+#### Reset last commit (keep in staging)
 ```
 git reset --soft HEAD~1
 ```

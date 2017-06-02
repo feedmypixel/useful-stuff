@@ -157,7 +157,7 @@ export MY_ENV=value
 
 #### Show env
 ```
-echo MY_ENV
+echo $MY_ENV
 ```
 
 #### Show all envs
