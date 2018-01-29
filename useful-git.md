@@ -11,6 +11,7 @@ A list of useful git commands.
 - [Duplicate](#duplicate)
 - [Fixup](#fixup)
 - [Merge](#merge)
+- [Prune](#prune)
 - [Rebase](#rebase)
 - [Remote](#remote)
 - [Reset](#reset)
@@ -288,6 +289,21 @@ git push origin <branchName>
 git merge <branchName>
 ```
 
+<a name="prune">
+## Prune
+
+#### Cleanup
+Cleanup unnecessary files and optimize the local repository, good to do often
+```
+git gc --prune=now
+```
+
+#### Remote prune
+Prune all unreachable objects from the object database, good to do often
+```
+git remote prune origin
+```
+
 <a name="rebase">
 ## Rebase
 
@@ -397,6 +413,11 @@ git reset HEAD <file>
 #### Revert file (or checkout a file from a repo)
 ```
 git checkout <branch> <file>
+```
+
+#### Revert a commit without auto commit
+```
+git revert -n <commit_hash>
 ```
 
 #### Undo last commit (handy to recommit W.I.P)
@@ -528,6 +549,11 @@ st = status
 
 <a name="stash">
 ## Stash
+
+#### Git stash any not added changes
+```
+git stash -u
+```
 
 #### Git stash list, all stashes
 ```

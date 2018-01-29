@@ -14,6 +14,24 @@ docker run -p 80:80 -d node-test
 ```
 docker run -d -p 6379:6379 --name rediscache redis
 ```
+```
+docker run -d -p 6379:6379 redis
+```
+
+#### Run direct from Selenium image, expose port 4444, run in background
+```
+docker run -d -p 4444:4444 --name selenium selenium/standalone-chrome:3.5.3
+```
+
+#### Run direct from DEBUG Selenium image, expose port 4444 and 5900 (for vnc), run in background
+```
+docker run -d -p 4444:4444 -p 5900:5900 selenium/standalone-chrome-debug
+```
+
+#### Start an existing container
+```
+docker start <name|id>
+```
 
 #### See running docker containers
 ```
@@ -93,9 +111,19 @@ docker-compose up
 docker-compose up --build
 ```
 
+#### See whats running
+```
+docker-compose ps
+```
+
 #### Remove last compose
 ```
 docker-compose rm
+```
+
+#### Remove compose instance
+```
+docker-compose <image-name> rm
 ```
 
 #### Show available envs on image
@@ -103,3 +131,19 @@ docker-compose rm
 docker-compose run <image_name> env
 ```
 
+## Docker hub
+
+#### Build local docker file
+```
+docker build -t <image_tag_name> . --no-cache
+```
+
+#### Tag image to repo 
+```
+docker tag <image_name> <docker_hub_repo>
+```
+
+#### Push tag to repo
+```
+docker push <docker_hub_repo>
+```

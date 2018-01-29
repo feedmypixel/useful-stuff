@@ -412,6 +412,17 @@ grep -rl <string> <pathname> | grep .svn -v
 grep -nr --include \*.html <string> .
 ```
 
+#### Grep for selectorsand save results to file
+```
+grep -ohrE '^@m[^({]+' govuk_frontend_toolkit/stylesheets/ > ~/Desktop/govuk_frontend_toolkit-mixins.txt
+```
+```
+grep -ohrE '^[$][^:]+' govuk_frontend_toolkit/stylesheets/ > ~/Desktop/govuk_frontend_toolkit-vars.txt
+```
+```
+grep -ohrE '^[\.#][^{]+' govuk-elements-sass/public/sass/ > ~/Desktop/govuk-elements-sass-selectors.txt
+```
+
 #### Find file
 ```
 find <pathname> -name <filename>
