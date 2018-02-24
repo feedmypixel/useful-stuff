@@ -129,6 +129,11 @@ git whatchanged
 git whatchanged -p
 ```
 
+#### Remove from stage before initial commit
+```
+git rm --cached . -r
+```
+
 
 
 <a name="conditionally">

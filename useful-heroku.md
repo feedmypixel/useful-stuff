@@ -1,5 +1,10 @@
 # Useful Heroku Stuff
 
+#### Push app to heroku
+```
+git push heroku <local-branch-name>:master
+```
+
 #### Add heroku app as git remote
 ```
 cd to <repository>
