@@ -110,6 +110,10 @@ git co <branchName>
 git co <commit_sha>
 ```
 
+#### Sort by date
+```
+git branch --sort=-committerdate
+```
 
 <a name="changes">
 ## Changes
