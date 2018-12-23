@@ -4,6 +4,7 @@
 - [Env](#env)
 - [Inspector](#inspector)
 - [Run](#run)
+- [Code](#code)
 
 <a name="env">
 ## Env
@@ -55,4 +56,12 @@ node -pe "require('url').parse('/test?q=1', true)"
 #### V8 engine version
 ```
 node -p process.versions.v8
+```
+
+<a name="code">
+## Code
+
+#### Save object to json file
+```
+require('fs').writeFileSync('./post.js', JSON.stringify(response.data, null, 2))
 ```

@@ -63,7 +63,10 @@ Run a "redis" image named "rediscache" and expose port 6379
 ```
 docker run -d -p 6379:6379 --name rediscache redis
 ```
-
+#### Run redis-cli in redis docker
+```
+docker exec -it <image_name> redis-cli
+```
 #### Run local image with interactive mode
 ```
 docker run -it redis /bin/bash

@@ -90,7 +90,7 @@ tar -cvzf <filename>.tar.gz <pathname>*.jpg
 <a name="copy">
 ## Copy
 
-#### Copy a folder and sub directories
+#### Copy a folder and sub directories (not including parent directory)
 ```
 cp -R <pathname>/* <pathname>
 ```
@@ -163,6 +163,11 @@ echo $MY_ENV
 #### Show all envs
 ```
 printenv
+```
+
+#### remove env
+```
+unset MY_ENV
 ```
 
 
