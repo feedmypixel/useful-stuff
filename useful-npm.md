@@ -1,5 +1,20 @@
 # Useful NPM Stuff
 
+#### Update version
+```
+npm version <semver-version-number>
+```
+
+#### Publish
+```
+npm publish
+```
+
+#### View package details
+```
+npm view <pacakge-name>
+```
+
 #### Save npm install in dependencies
 ```
 npm i <middleware> —-save-dev
@@ -30,7 +45,7 @@ ncu
 ncu -u
 ```
 
-#### Show versions of package on nom
+#### Show versions of package on npm
 ```
 npm view <package_name> versions 
 ```
@@ -45,13 +60,13 @@ npm ls
 ```
 
 #### link
-cd to repo you wish to link to
+cd to dependecny repo you wish to link to
 
 ```
-npm link <package-name>
+npm link
 ```
 
-cd to repo you wish to have linked repo in (the linked repo will be in node_modules)
+cd to repo you wish to link the dependency to (your app) the linked repo will be syminked in node_modules
 ```
 npm link <package-name>
 ```
@@ -65,4 +80,17 @@ For any task you can use the `pre`<task> or `post`<task> syntax.
     "lint": "perform linting task",
     "postlint": "perform task after linting",
 }
+```
+
+#### Reference a private github repo and branch
+```
+    "dependencies": {
+        "fs-extra": "git+https://<github-dev-token>:x-oauth-basic@github.com/<user_name>/<repo>.git#<branch>"
+```
+
+
+#### Reference a github repo and branch
+```
+    "dependencies": {
+        "fs-extra": "<user_name>/<repo>.git#<branch>"
 ```

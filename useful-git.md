@@ -79,6 +79,11 @@ git co --orphan <newBranchName>
 git push -u origin <local branch name>
 ```
 
+#### Force push safely
+```
+git push origin <branch-name> --force-with-lease
+```
+
 #### Remove remote branch
 ```
 git push origin :bc-name-log-fix
@@ -331,6 +336,10 @@ git rebase -ip HEAD~3
 git rebase master <your branch name>
 ```
 
+#### Rebase upto initial commit
+```
+git rebase -ip --autosquash --root
+```
 
 #### Rebase first and second commit.
 ```
@@ -483,6 +492,11 @@ git reset HEAD
 #### Revert all files
 ```
 git reset --hard
+```
+
+#### Reset branch
+```
+git reset --hard origin/dash-of-p-example
 ```
 
 #### Remove branches that have been merged already remotely
