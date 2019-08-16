@@ -15,6 +15,16 @@ npm publish
 npm view <pacakge-name>
 ```
 
+#### View package versions
+```
+npm view <pacakge-name> versions
+```
+
+#### Deprecate version
+```
+npm deprecate <pacakge-name>@<version> "<message>"
+```
+
 #### Save npm install in dependencies
 ```
 npm i <middleware> —-save-dev

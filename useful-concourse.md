@@ -41,7 +41,15 @@ fly -t <target> set-pipeline -p <pipeline> -c <config>
 fly -t fpdp set-pipeline --pipeline benc-fesk-pdp --config ci/pipeline.yml
 ```
 
-#### Trigger job
+#### Trigger Job
+```
+fly -t fs trigger-job -j <pipeline>/<job>
+```
+
+#### Trigger job (with watch)
 ```
 fly -t <target> trigger-job --job <pipeline>/<job> --watch
 ```
+
+
+

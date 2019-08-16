@@ -4,6 +4,11 @@
 ```
 docker build -t <name> .
 ```
+or
+
+```
+docker build -t <url><name><tag> .
+```
 
 #### Run docker image, expose port 80 and run in background
 ```

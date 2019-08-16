@@ -4,3 +4,8 @@
 ```
 kubectl version
 ```
+
+#### Get nodes
+```
+kubectl get nodes
+```
