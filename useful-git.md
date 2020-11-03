@@ -20,6 +20,7 @@ A list of useful git commands.
 - [Stash](#stash)
 - [Tag](#tag)
 - [Update](#update)
+- [Git crypt](#git_crypt)
 
 
 
@@ -58,6 +59,15 @@ git mv --force myfile MyFile
 
 <a name="branch">
 ## Branch
+
+#### Sort branches by date
+```
+git branch --sort=-committerdate
+```
+Or
+```
+git for-each-ref --sort=-committerdate refs/heads/
+```
 
 #### Show remote branches
 ```
@@ -120,6 +130,11 @@ git co <commit_sha>
 git branch --sort=-committerdate
 ```
 
+#### Compare differences with branches
+```
+git log origin/<branch>..origin/<branch-to-compare>
+```
+
 <a name="changes">
 ## Changes
 
@@ -156,6 +171,11 @@ git add -u
 #### Add lines of code conditionally
 ```
 git add -p
+```
+
+#### Add lines of code for specific file extension
+```
+g add \*.js -p
 ```
 
 #### Commit code conditionally
@@ -529,6 +549,14 @@ git checkout master
 git rebase upstream/master
 ```
 
+<a name="revert">
+## Revert
+
+#### Revert a merge commit
+```
+git revert -m 1 <commit sha>
+```
+
 
 <a name="search">
 ## Search
@@ -651,6 +679,10 @@ git tag -d <tag_name>
 ```
 git push origin :refs/tags/<tag_name>
 ```
+or
+```
+$ git push --delete origin <tag_name>
+```
 
 #### Rename tag
 ```
@@ -688,3 +720,18 @@ git fetch
 ```
 git pull
 ```
+
+<a name="git-crypt">
+## Git crypt
+https://github.com/AGWA/git-crypt
+
+#### unlock keys
+```
+git-crypt unlock 
+```
+
+#### lock keys
+```
+git-crypt lock 
+```
+

@@ -3,6 +3,7 @@
 ### Table of contents
 - [Alias](#alias)
 - [Append](#append)
+- [base64](#base64)
 - [Compression](#compression)
 - [Copy](#copy)
 - [Count](#count)
@@ -57,6 +58,18 @@ Append text to file
 echo BEN="example" >> /etc/environment
 ```
 
+<a name="base64">
+## Base64
+
+#### encode
+```
+echo -n '<item-to-encode>' | openssl base64
+```
+
+#### decode
+```
+echo '<item-to-decode>' | base64 --decode
+```
 
 <a name="compression">
 ## Compression

@@ -13,3 +13,8 @@ expect `PONG` back
 ```
 redis-cli ping
 ```
+
+#### Flush
+```
+FLUSHALL
+```
