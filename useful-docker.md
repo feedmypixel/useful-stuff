@@ -1,5 +1,10 @@
 # Useful Docker
 
+#### Start docker desktop
+```
+open -a Docker
+```
+
 #### Build from Docker file and tag with <name>
 ```
 docker build -t <name> .
@@ -21,6 +26,11 @@ docker run -d -p 6379:6379 --name rediscache redis
 ```
 ```
 docker run -d -p 6379:6379 redis
+```
+
+#### Run and pass in env
+```
+docker run --env PORT=8080 -p 8080:8080 <tag>
 ```
 
 #### Run direct from Selenium image, expose port 4444, run in background
@@ -46,6 +56,11 @@ docker ps
 #### View docker images
 ```
 docker images
+```
+
+#### Get SHA of docker images
+```
+docker images --digests
 ```
 
 #### Delete docker image
@@ -77,6 +92,16 @@ docker exec -it <image_name> redis-cli
 docker run -it redis /bin/bash
 ```
 
+#### Run local image with interactive mode When Dockerfile has an ENTRYPOINT on apline
+```
+docker run -it --entrypoint /bin/bash feedmypixel/hello-world-node
+```
+
+#### Run local image with interactive mode When Dockerfile has an ENTRYPOINT on apline
+```
+docker run -it --entrypoint /bin/ash feedmypixel/hello-world-node
+```
+
 #### Run local image with interactive mode on apline
 ```
 docker run -it redis /bin/ash
@@ -102,6 +127,8 @@ docker rmi $(docker images -q)
 docker inspect --format '{{ .NetworkSettings.IPAddress }}' <container_id>
 ```
 
+
+
 ## Docker Compose
 
 #### Buld docker compose and associated images
@@ -114,7 +141,7 @@ docker-compose build
 docker-compose up
 ```
 
-#### Re build compose
+#### Build compose
 ```
 docker-compose up --build
 ```

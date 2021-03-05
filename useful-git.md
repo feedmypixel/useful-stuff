@@ -137,6 +137,10 @@ git log origin/<branch>..origin/<branch-to-compare>
 
 <a name="changes">
 ## Changes
+#### Show changes
+```
+git diff HEAD
+```
 
 #### Show staged/staging changes
 ```

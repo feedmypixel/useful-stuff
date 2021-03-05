@@ -23,6 +23,7 @@
 - [Search & Replace](#search-replace)
 - [Symlink](#symlink)
 - [Tail](#tail)
+- [Time](#time)
 - [Wget](#wget)
 
 
@@ -125,6 +126,11 @@ ls -l | grep "^d" | wc -l
 mkdir -p <pathname>
 ```
 
+#### Make directory and cd into it
+```
+mkdir <directory_name> && cd $_
+```
+
 #### Make directory and create child folders
 ```
 mkdir -p <pathname>/{js,css,lib,img,views}
@@ -218,6 +224,11 @@ du -h <pathname> | grep '[0-9]G'
 sudo ps -ef | grep <process>
 ```
 
+#### Find PID by port
+```
+lsof -i :<port>
+```
+
 #### Kill process
 ```
 kill -9 <pid>
@@ -226,11 +237,6 @@ kill -9 <pid>
 #### Kill all by name
 ```
 killall node
-```
-
-#### What is using a port number
-```
-sudo lsof -i :<port_number>
 ```
 
 #### Find path of executable
@@ -503,6 +509,13 @@ sed 's/one/ONE/' <file
 ln -s <filename> <sym_link>
 ```
 
+<a name="time">
+## Time
+
+Time how long a command takes
+```
+time npm run something
+```
 
 
 <a name="tail">
