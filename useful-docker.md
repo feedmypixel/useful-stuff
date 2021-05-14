@@ -127,6 +127,28 @@ docker rmi $(docker images -q)
 docker inspect --format '{{ .NetworkSettings.IPAddress }}' <container_id>
 ```
 
+#### Docker Prune
+```
+docker system prune
+```
+
+## PostGres
+> [Great turotial](https://www.optimadata.nl/blogs/1/n8dyr5-how-to-run-postgres-on-docker-part-1)
+
+#### Setup local postgres
+```
+docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
+```
+
+#### Connect via exec
+```
+docker exec -it some-postgres bash
+```
+
+#### Run with port
+```
+docker run --name docker-postgres-local -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -d postgres
+```
 
 
 ## Docker Compose

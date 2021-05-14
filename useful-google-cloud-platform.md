@@ -6,6 +6,16 @@ Logs explorer add a query to see the url
 httpRequest.requestUrl="<url>"
 ```
 
+#### Log queries
+```
+=           # equal
+!=          # not equal
+> < >= <=   # numeric ordering
+:           # "has" matches any substring in the log entry field
+=~          # regular expression search for a pattern
+!~          # regular expression search not for a pattern
+```
+
 #### Login (use this to login)
 ```
 gcloud auth application-default login

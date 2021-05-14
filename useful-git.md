@@ -370,6 +370,11 @@ git rebase -ip --autosquash --root
 git rebase -i --root master
 ```
 
+#### Rebase root
+```
+git rebase -i --root
+```
+
 #### Operate on non-consecutive commits 
 You can rebase non consecutive commits together this is just a matter of working bottom up (oldest is at the top) and taking the latest/last commit back to the first/oldest commit you wish to fixup/squash with. I would backup your branch and experiment. Remember to fixup/squah at same time as moving the line of the commit in rebase.
 
