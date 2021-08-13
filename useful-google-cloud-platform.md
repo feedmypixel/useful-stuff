@@ -7,6 +7,7 @@ httpRequest.requestUrl="<url>"
 ```
 
 #### Log queries
+Various ways of searching for something
 ```
 =           # equal
 !=          # not equal
@@ -15,6 +16,13 @@ httpRequest.requestUrl="<url>"
 =~          # regular expression search for a pattern
 !~          # regular expression search not for a pattern
 ```
+
+#### Negate a query
+Negate a query by placing a `-` infront of the query
+```
+-httpRequest.requestUrl=~"something-we-want-to-find"
+```
+
 
 #### Login (use this to login)
 ```

@@ -144,6 +144,10 @@ docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgre
 ```
 docker exec -it some-postgres bash
 ```
+#### Start existing container
+```
+docker start docker-postgres-local
+```
 
 #### Run with port
 ```

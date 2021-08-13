@@ -55,6 +55,9 @@ terraform output
 ```
 terraform plan
 ```
+> If you get a message about running terraform init in a folder when running `terragrunt plan`. 
+> You can delete the cache folder and run `terragrunt plan` again
+
 
 ### Plan any dependencies
 ```
@@ -82,17 +85,37 @@ tgenv install <version_number>
 ```
 
 ## Terragrunt
+
 ```
 terragrunt --version
 ```
+
+### Console
+```
+terragrunt console
+```
+> In the console you can type the name of a module to see whats available e.g `module.function_service` and enter will provide the properties that are avialable/exported on this module
 
 ### Test a terragrunt file
 ```
 terragrunt plan
 ```
 
+### Apply a terragrunt file
+```
+terragrunt apply
+```
 
+### State
+```
+terragrunt state
+```
 
+### Visibility
+A lot of the visibility in Terraform/terragruntcomes from the logs when you run `terragrunt plan`
+It will tell you whats changing and you can check over before you `terragrunt apply`.
+
+State is also useful but this a little move complicated
 
 
 ## Terraform env

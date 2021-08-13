@@ -72,6 +72,23 @@ echo -n '<item-to-encode>' | openssl base64
 echo '<item-to-decode>' | base64 --decode
 ```
 
+<a name="cd">
+## CD
+
+#### quickly change directory
+If you have the following two folders
+
+```
+/ben/cats
+/ben/dogs
+```
+You can switch from `cats` to `dogs` by using:
+
+```
+cd cats dogs
+```
+
+
 <a name="compression">
 ## Compression
 

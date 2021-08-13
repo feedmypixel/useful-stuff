@@ -76,12 +76,12 @@ git branch -a
 
 #### Create branch and check it out
 ```
-git co -b <branchName>
+git co -b <branchName | HEAD>
 ```
 
 #### Create a new branch with no work on it
 ```
-git co --orphan <newBranchName>
+git co --orphan <newbranchName | HEAD>
 ```
 
 #### Create local branch on remote
@@ -106,18 +106,18 @@ git branch --merged | grep -v "\*" | grep -v master | xargs -n 1 git branch -d
 
 #### Create branch and switch to it
 ```
-git checkout -b branchName
+git checkout -b branchName | HEAD
 ```
 
 #### Delete a local branch
 ```
-git br -D <branchName>
+git br -D <branchName | HEAD>
 ```
 
 #### Checkout a new branch
 ```
 git fetch
-git co <branchName>
+git co <branchName | HEAD>
 ```
 
 #### Checkout a previous commit
@@ -319,13 +319,14 @@ git ci
 
 #### Push to branch
 ```
-git push origin <branchName>
+git push origin <branchName | HEAD>
 ```
 
 #### Merge local branch onto current branch
 ```
-git merge <branchName>
+git merge <branchName | HEAD>
 ```
+
 
 <a name="prune">
 ## Prune
