@@ -104,12 +104,17 @@ docker run -it --entrypoint /bin/ash feedmypixel/hello-world-node
 
 #### Run local image with interactive mode on apline
 ```
-docker run -it redis /bin/ash
+docker run -it <container_name> /bin/ash
 ```
 
-#### New shell process on container called foo
+#### New shell process on running container called with alpine
 ```
-docker exec -it redis /bin/bash
+docker exec -it <container_id> /bin/ash
+```
+
+#### New shell process on running container 
+```
+docker exec -it <container_id> /bin/bash
 ```
 
 #### Delete all containers
@@ -154,57 +159,76 @@ docker start docker-postgres-local
 docker run --name docker-postgres-local -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -d postgres
 ```
 
+### Run with envs
+```
+docker run -it --rm -d -p 8081:80 --env <ENV_PROPERTY>=<ENV_VALUE> --name <image_name> <image>
+```
+
+### Logs
+- Run docker events in a separate tab
+```
+docker events&
+```
+- Start your docker container
+- Note the docker container hex id produced from docker events
+> i.e ad7734532b9440454127ee41aefbeddf0382b5fe4e1c9e70c494ca0c4c5c1e78
+- Add the <docker_container_hex_id> to `docker logs`
+- `docker logs <docker_container_hex_id>`
+- This will provide you with logs around what has gone wrong
+
+
 
 ## Docker Compose
 
-#### Buld docker compose and associated images
+### Buld docker compose and associated images
 ```
 docker-compose build
 ```
 
-#### Create compose
+### Create compose
 ```
 docker-compose up
 ```
 
-#### Build compose
+### Build compose
 ```
 docker-compose up --build
 ```
 
-#### See whats running
+### See whats running
 ```
 docker-compose ps
 ```
 
-#### Remove last compose
+### Remove last compose
 ```
 docker-compose rm
 ```
 
-#### Remove compose instance
+### Remove compose instance
 ```
 docker-compose <image-name> rm
 ```
 
-#### Show available envs on image
+### Show available envs on image
 ```
 docker-compose run <image_name> env
 ```
 
+
 ## Docker hub
 
-#### Build local docker file
+### Build local docker file
 ```
 docker build -t <image_tag_name> . --no-cache
 ```
 
-#### Tag image to repo 
+### Tag image to repo 
 ```
 docker tag <image_name> <docker_hub_repo>
 ```
 
-#### Push tag to repo
+### Push tag to repo
 ```
 docker push <docker_hub_repo>
 ```

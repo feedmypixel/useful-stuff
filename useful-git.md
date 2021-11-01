@@ -541,7 +541,7 @@ git co -
 
 #### Reset fork on github
 ```
-git remote add upstream git://<repo>.git
+	git remote add ![upstream]() git://<repo>.git
 git fetch upstream
 git branch backup
 git reset --hard upstream/master

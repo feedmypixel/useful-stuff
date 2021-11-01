@@ -73,7 +73,11 @@ VALUES('Cactus', CURRENT_TIMESTAMP);
 SELECT * FROM plants;
 ```
 
-
+## Dump/restore
+To restore a DB into docker locally use
+```
+docker exec -i <docker-image-name> psql -U postgres -v -d <db_name> < /db_dump.sql
+```
 
 
 
